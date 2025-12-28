@@ -12,9 +12,8 @@
     <link
       rel="stylesheet"
       href="styles.css" />
-    <script
-      src="https://unpkg.com/vue@next"
-      defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js" defer></script>
+
     <script
       src="app.js"
       defer></script>
@@ -26,15 +25,15 @@
       <!-- 2) Output your age -->
       <p>{{ age }}</p>
       <!-- 3) Output your age + 5 -->
-      <p>{{ ageInFiveYears }}</p>
+      <p>{{ calculateAgeInFiveYears() }} in five years</p>
       <!-- 4) Output a random number (0 to 1) -->
-      <p>Favorite Number: RANDOM NUMBER BETWEEN 0 AND 1</p>
+      <p>Favorite Number: {{ calculateRandomNumber() }}</p>
       <div>
         <!-- 5) Display some image you found via Google -->
-        <img src="SOME IMAGE URL" />
+        <img :src="imageUrl" />
       </div>
       <!-- 6) Prepopulate the input field with your name via the "value" attribute -->
-      <input type="text" />
+      <input type="text" value="Marcelo"/>
     </section>
   </body>
 </html>
